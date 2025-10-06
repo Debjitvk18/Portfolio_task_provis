@@ -80,10 +80,3 @@ This project is open source under the [MIT License](LICENSE).
 ---
 
 ### ⭐ If you like this project, consider giving it a star on GitHub!
-
-```
-
----
-
-Would you like me to format it with **your actual name, email, and GitHub repo URL** so it’s ready to use directly?
-```
