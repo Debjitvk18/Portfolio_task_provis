@@ -1,18 +1,26 @@
 
 # 🌐 Portfolio Website
 
-A simple and responsive personal portfolio website built using **HTML** and **CSS**.  
-This site showcases my projects, skills, and contact information in a clean, professional layout.
+A simple, modern, and responsive **personal portfolio website** built using **HTML**, **CSS**, and a bit of **JavaScript**.  
+This site showcases my **projects**, **skills**, and **achievements** in a clean and professional layout.
 
 ---
 
 ## 🚀 Features
 
-- **Responsive Design:** Works seamlessly on desktop, tablet, and mobile.  
-- **Projects Section:** Displays key projects with descriptions and links.  
-- **About Section:** Highlights personal background and skills.  
-- **Contact Section:** Easy access to social links or email.  
-- **Lightweight & Fast:** No frameworks or JavaScript dependencies.
+- 💻 **Responsive Design:** Works smoothly across desktop, tablet, and mobile devices.  
+- 🧩 **Projects Showcase:** Displays featured projects with descriptions and links.  
+- 👤 **About Section:** Highlights personal background, education, and experience.  
+- 🛠️ **Skills & Achievements:** Lists technical skills and key achievements.  
+- 🌙 **Dark / Light Mode:** Toggle between themes with persistence using `localStorage`.  
+- ⚡ **Lightweight & Fast:** Built without frameworks — just HTML, CSS, and Vanilla JS.
+
+---
+
+## 🌍 Live Demo
+
+👉 **View the website here:**  
+🔗 [https://portfoliotaskprovis2.vercel.app/](https://portfoliotaskprovis3.vercel.app/)
 
 ---
 
@@ -22,7 +30,8 @@ This site showcases my projects, skills, and contact information in a clean, pro
 |-----------|--------|
 | Markup | HTML5 |
 | Styling | CSS3 (Flexbox & Grid) |
-| Deployment | GitHub Pages / Netlify / Vercel |
+| Scripting | JavaScript (Vanilla) |
+| Deployment | Vercel |
 | Version Control | Git & GitHub |
 
 ---
@@ -39,44 +48,49 @@ git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
 
 # Open the project in your browser
-open index.html   # or double-click index.html
+open index.html   # or simply double-click index.html
 ````
 
-No installation or dependencies required — just a modern browser.
+🧠 No installation or dependencies required — just open it in any modern browser.
 
 ---
 
 ## 📂 Project Structure
 
 ```
-├── index.html        # Main page
-├── about.html        # About section (optional)
-├── projects.html     # Projects page (optional)
-├── contact.html      # Contact page (optional)
-├── /assets           # Images, icons, and other media
-└── /css
-    └── style.css     # Main stylesheet
+├── index.html          # Main page
+├── /css
+│   └── style.css       # Main stylesheet
+├── /assets             # Images, icons, and media
+├── /js
+│   └── script.js       # Main JavaScript file (animations, theme, menu)
+└── README.md           # Documentation
 ```
 
-> Simplify or modify the structure based on how you organized your files.
+> You can adjust this structure depending on your personal setup.
 
 ---
 
-## 🌍 Deployment
+## 🌎 Deployment
 
-You can easily host this portfolio for free:
+Easily host this portfolio for free:
 
-* **GitHub Pages** → push your repository and enable Pages in repo settings.
-* **Netlify / Vercel** → drag and drop your folder, or connect your GitHub repo.
+* **Vercel:** [https://vercel.com](https://vercel.com) — supports drag-and-drop or GitHub integration.
+* **Netlify:** [https://netlify.com](https://netlify.com) — quick one-click deploy.
+* **GitHub Pages:** Enable Pages in your repo settings to host your site instantly.
 
 ---
-
-
 
 ## 📝 License
 
-This project is open source under the [MIT License](LICENSE).
+This project is open-source under the **[MIT License](LICENSE)** — free to use and modify.
 
 ---
 
-### ⭐ If you like this project, consider giving it a star on GitHub!
+### ⭐ If you like this project, consider giving it a **star** on GitHub!
+
+It helps others discover it and supports future improvements.
+
+```
+
+
