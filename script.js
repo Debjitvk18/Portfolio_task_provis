@@ -36,6 +36,24 @@ menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('open');
 });
 
+// 🧩 Close mobile menu when a link is clicked
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (nav.classList.contains('show')) {
+      nav.classList.remove('show');
+      menuBtn.classList.remove('open');
+    }
+  });
+});
+
+// 🧩 Close mobile menu if clicked outside
+document.addEventListener('click', (e) => {
+  if (!header.contains(e.target) && nav.classList.contains('show')) {
+    nav.classList.remove('show');
+    menuBtn.classList.remove('open');
+  }
+});
+
 // ===== Scroll Animations =====
 const revealElements = document.querySelectorAll('.section, .project-card, .edu-card, .skill-card');
 
