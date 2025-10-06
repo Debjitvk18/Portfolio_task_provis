@@ -1,3 +1,4 @@
+/* ===== Global Styles ===== */
 * {
   margin: 0;
   padding: 0;
@@ -5,10 +6,12 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+  color: #2b2b2b;
   line-height: 1.6;
-  background-color: #f8f9fa;
+  background-color: #f4f6f8;
+  scroll-behavior: smooth;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 .container {
@@ -18,24 +21,34 @@ body {
   padding: 20px 0;
 }
 
+/* ===== Header ===== */
 header {
-  background: #1e1e1e;
+  background: #0f172a;
   color: #fff;
   padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
   font-size: 1.8em;
   font-weight: 600;
   letter-spacing: 1px;
+  color: #38bdf8;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
   gap: 25px;
 }
 
@@ -47,18 +60,47 @@ nav a {
 }
 
 nav a:hover {
-  color: #1abc9c;
+  color: #38bdf8;
 }
 
+/* ===== Theme Toggle Button ===== */
+.theme-toggle {
+  background: #1e293b;
+  border: 1px solid #334155;
+  font-size: 1.2em;
+  color: #38bdf8;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: #334155;
+  transform: rotate(20deg);
+}
+
+/* ===== Active Nav Link ===== */
+nav a.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
+/* ===== Sections ===== */
 .section {
-  padding: 70px 0;
+  padding: 80px 0;
   text-align: center;
 }
 
 .section h2 {
   margin-bottom: 20px;
   font-size: 2.2em;
-  color: #222;
+  color: #0f172a;
   position: relative;
 }
 
@@ -67,7 +109,7 @@ nav a:hover {
   display: block;
   width: 60px;
   height: 3px;
-  background: #1abc9c;
+  background: #38bdf8;
   margin: 10px auto 0;
   border-radius: 2px;
 }
@@ -76,9 +118,10 @@ nav a:hover {
   max-width: 700px;
   margin: 20px auto 0;
   font-size: 1.1em;
-  color: #555;
+  color: #475569;
 }
 
+/* ===== Projects Grid ===== */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -87,18 +130,19 @@ nav a:hover {
 }
 
 .project-card {
-  background: #fff;
+  background: #ffffff;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.4s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
+/* ===== Education Grid ===== */
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -107,12 +151,13 @@ nav a:hover {
 }
 
 .edu-card {
-  background: #fff;
+  background: #ffffff;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
+/* ===== Skills Grid ===== */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -122,9 +167,9 @@ nav a:hover {
 }
 
 .skill-card {
-  background: #fff;
-  border: 2px solid #1abc9c;
-  color: #111;
+  background: #ffffff;
+  border: 2px solid #38bdf8;
+  color: #0f172a;
   font-weight: 500;
   padding: 15px 25px;
   border-radius: 10px;
@@ -134,11 +179,12 @@ nav a:hover {
 }
 
 .skill-card:hover {
-  background: #1abc9c;
+  background: #38bdf8;
   color: #fff;
   transform: scale(1.05);
 }
 
+/* ===== Awards ===== */
 .awards-list {
   list-style: none;
   max-width: 700px;
@@ -149,49 +195,194 @@ nav a:hover {
 
 .awards-list li::before {
   content: "• ";
-  color: #1abc9c;
+  color: #38bdf8;
   font-weight: bold;
 }
 
+/* ===== Buttons ===== */
 .contact-btn,
 .live-btn {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: #1abc9c;
+  background: #38bdf8;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: 500;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-btn:hover,
 .live-btn:hover {
-  background: #17a589;
+  background: #0284c7;
   transform: translateY(-3px);
 }
 
+/* ===== Footer ===== */
 footer {
-  background: #1e1e1e;
-  color: #bbb;
+  background: #0f172a;
+  color: #cbd5e1;
   text-align: center;
   padding: 20px 0;
   font-size: 0.9em;
 }
 
+/* ===== Responsive Menu Toggle ===== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #38bdf8;
+}
+
 @media (max-width: 768px) {
   nav ul {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    width: 100%;
+    background: #0f172a;
+    text-align: center;
   }
 
-  .skill-card {
-    min-width: 100px;
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   .section {
     padding: 50px 0;
   }
+}
+
+/* ===== Scroll Fade-in Animation ===== */
+.section,
+.project-card,
+.edu-card,
+.skill-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Back to Top Button ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.4em;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: #0284c7;
+  transform: translateY(-3px);
+}
+
+/* ===== Dark Mode ===== */
+/* ===== Dark Mode ===== */
+.dark-mode {
+  background-color: #0b1120; /* darker base for strong contrast */
+  color: #e2e8f0;
+}
+
+/* Header & Footer */
+.dark-mode header {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+.dark-mode footer {
+  background: #020617;
+  color: #94a3b8;
+  border-top: 1px solid #1e293b;
+}
+
+/* Cards (Project, Education, Skills) */
+.dark-mode .project-card,
+.dark-mode .edu-card,
+.dark-mode .skill-card {
+  background: #1e293b; /* lighter navy for contrast */
+  color: #f1f5f9; /* nearly white text */
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.15); /* soft glow */
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+}
+
+.dark-mode .project-card:hover,
+.dark-mode .edu-card:hover,
+.dark-mode .skill-card:hover {
+  background: #1e40af; /* bright hover accent */
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.25);
+}
+
+/* Section Headings */
+.dark-mode .section h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .section h2::after {
+  background: #38bdf8;
+}
+
+/* Paragraph Texts */
+.dark-mode #about p {
+  color: #cbd5e1;
+}
+
+/* Awards Section */
+.dark-mode .awards-list {
+  color: #e2e8f0;
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.12);
+}
+
+.dark-mode .awards-list li::before {
+  color: #38bdf8;
+}
+
+/* Navigation */
+.dark-mode nav a {
+  color: #e2e8f0;
+}
+
+.dark-mode nav a:hover {
+  color: #38bdf8;
+}
+
+.dark-mode nav a.active {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
+/* Theme Toggle Button */
+.dark-mode .theme-toggle {
+  background: #1e293b;
+  color: #facc15; /* golden sun icon color */
+  border-color: #475569;
+}
+
+.dark-mode .theme-toggle:hover {
+  background: #334155;
+  transform: rotate(25deg);
 }
